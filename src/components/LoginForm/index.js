@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {Redirect} from 'react-router-dom'
+import apiData from '../../api/api'
 
 import './index.css'
 
@@ -37,7 +38,7 @@ class LoginForm extends Component {
     event.preventDefault()
     const {username, password} = this.state
     const userDetails = {username, password}
-    const url = 'https://apis.ccbp.in/login'
+    const url = apiData.login
     const options = {
       method: 'POST',
       body: JSON.stringify(userDetails),
