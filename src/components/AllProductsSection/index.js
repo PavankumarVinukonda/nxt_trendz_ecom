@@ -194,7 +194,9 @@ class AllProductsSection extends Component {
       resultData = productsList.sort(GetSortOrder('rating'))
     }
 
-    console.log(resultData)
+    this.setState({
+      productsList: resultData,
+    })
   }
 
   renderProductsListView = () => {
